@@ -35,4 +35,14 @@ describe('Submit feedback', () => {
       })
     ).rejects.toThrow();
   });
+
+  it('should not be able to submit a feedback with an invalid screenshot', async () => {
+    await expect(
+      submitFeedback.execute({
+        type: 'BUG',
+        comment: 'Example comment',
+        screenshot: 'example.png',
+      })
+    ).rejects.toThrow();
+  });
 });
