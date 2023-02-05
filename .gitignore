@@ -1,5 +1,7 @@
 node_modules
 .history
-*.db
+coverage
+dist
+prisma/dev.db
 # Keep environment variables out of version control
 .env
